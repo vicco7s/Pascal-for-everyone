@@ -1,0 +1,34 @@
+program array_nilai;
+
+uses crt;
+var
+    nilai : array[1..5] of integer;
+    nama : array[1..5] of String[5];
+
+    begin
+        clrscr;
+        
+        Write('nilai 1 = '); ReadLn(nilai[0]);
+        Write('nilai 2 = '); ReadLn(nilai[1]);
+        Write('nilai 3 = '); ReadLn(nilai[2]);
+        Write('nilai 4 = '); ReadLn(nilai[3]);
+        Write('nilai 5 = '); ReadLn(nilai[4]);
+
+        WriteLn;
+        
+        Write('nama 1 = '); ReadLn(nama[1]);
+        Write('nama 2 = '); ReadLn(nama[2]);
+        Write('nama 3 = '); ReadLn(nama[3]);
+        Write('nama 4 = '); ReadLn(nama[4]);
+        Write('nama 5 = '); ReadLn(nama[5]);
+
+        WriteLn;
+
+        WriteLn('nilai pertama = ',nilai[0], ' nama ',nama[1]);
+        WriteLn('nilai kedua = ',nilai[1], ' nama ',nama[2]);
+        WriteLn('nilai ketiga = ',nilai[2], ' nama ',nama[3]);
+        WriteLn('nilai keempat = ',nilai[3],' nama ',nama[4]);
+        WriteLn('nilai kelima = ',nilai[4],' nama ',nama[5]);
+
+        ReadLn;
+    end.
