@@ -1,8 +1,8 @@
-Program pas12;
+Program pas12; //rubah sendiri
 
 Uses Crt;
 
-Const N = 2;
+Const N = 2; //rubah sediri
     Var 
     Nama : Array[1..N] Of String[20];
     nilai_data : Array[1..N,1..3] Of real;
