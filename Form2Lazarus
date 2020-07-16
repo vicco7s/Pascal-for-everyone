@@ -1,0 +1,126 @@
+unit Unit2;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+
+type
+
+  { TForm2 }
+
+  TForm2 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Label1: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+
+  public
+
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm2 }
+
+procedure TForm2.Button3Click(Sender: TObject);
+begin
+  Close;
+end;
+
+
+procedure TForm2.Button1Click(Sender: TObject);
+var absen,tugas,uts,uas, hasil : Real;
+begin
+    absen := StrToFloat(Edit2.Text);
+    tugas := StrToFloat(Edit3.Text);
+    uts := StrToFloat(Edit4.Text);
+    uas := StrToFloat(Edit5.Text);
+
+    hasil := absen * 0.1 + tugas * 0.2 + uts * 0.3 + uas * 0.4;
+    Label14.Caption:=FloatToStr(hasil);
+    Label13.Caption:=Edit1.Text;
+
+    if hasil > 80 then
+    begin
+    Label15.Caption:='Predikat A';
+    Label16.Caption:='Selamat Anda Lulus';
+    end
+    else if hasil >= 70 then
+    begin
+       Label15.Caption:='Predikat B';
+       Label16.Caption:='Selamat Anda Lulus';
+    end
+    else if hasil >= 60 then
+    begin
+       Label15.Caption:='Predikat C';
+       Label16.Caption:='Anda Tidak Lulus';
+    end
+    else if hasil >= 50 then
+    begin
+       Label15.Caption:='Predikat D';
+       Label16.Caption:='Anda Tidak Lulus';
+    end
+    else if hasil < 50 then
+    begin
+       Label15.Caption:='Predikat E';
+       Label16.Caption:='Anda Tidak Lulus';
+    end;
+
+end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+  Edit1.Text:='';
+  Edit2.Text:='0';
+  Edit3.Text:='0';
+  Edit4.Text:='0';
+  Edit5.Text:='0';
+  Label13.Caption:='-';
+  Label14.Caption:='0';
+  Label15.Caption:='-';
+  Label16.Caption:='-';
+end;
+
+
+{ TForm2 }
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+end;
+
+
+
+
+end.
